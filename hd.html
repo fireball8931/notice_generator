@@ -80,32 +80,29 @@
   <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
     <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
       <title>AOLCC</title>
-      <span class="fs-4">Emergency Closure Template</span>
+      <span class="fs-4">Help Desk Template</span>
     </a>
   </header>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <main>
-   <div>Instructions: Select the variables and copy the result to your clipboard. You can change the text and copy again if needed. Post to all social channels </div>
+   <div>Instructions: Select the variables and copy the result to your clipboard. You can change the text and copy again if needed. Send to help desk</div>
    <div>
-    Attention all students: Due to 
+    Hello,
+    Please 
 <form action="" id="">
-<select name="incidenttype" id="incidenttype">
-    <option value="a police incident">a police incident</option>
-    <option value="road conditions">road conditions</option>
-    <option value="a power outage">a power outage</option>
-</select>
-the 
-<select name="campus" id="campus">
-<option value="Abbotsford">Abbotsford Campus</option>
-<option value="Langley">Langley Campus</option>
-<option value="Abbotsford and Langley">Abbotsford and Langley Campuses</option>
+<select name="requesttype" id="requesttype">
+    <option value="Activate Typaz">Activate Typaz</option>
+    
+    </select>
+for  
+<input type="text" name="studentName" id="studentName" placeholder="Student Name">
+<input type="text" name="studentcontract" id="studentcontract" placeholder="Student Contract">
 
 
 
 </select>
 
-will be closed today.
-We will be working from home today, so please call if you need help.
+Thank you.
 
 </form>
 
@@ -117,13 +114,7 @@ We will be working from home today, so please call if you need help.
 
 
    <div>
-    Social Channels
-    <ul>
-    <li><a href="https://fb.me/aolcclangley" target="_blank" rel="noopener noreferrer">Langley Facebook</a></li>
-    <li><a href="https://fb.me/aolccabbotsford" target="_blank" rel="noopener noreferrer">Abbotsford Facebook</a></li>
-    <li><a href="https://www5.campuslogin.com/searchmass/sendtext.aspx?appid=8" target="_blank" rel="noopener noreferrer">Campus Login</a></li>
-    <li><a href="https://my.campuslogin.com" target="_blank" rel="noopener noreferrer">Campus Login</a></li>
-    </ul>
+    <a href="http://acmepro2011.academyoflearning.net/HelpDesk/NewRequest.aspx" target="_blank" rel="noopener noreferrer">Help Desk</a>
     </div>
   </main>
   <footer class="pt-5 my-5 text-muted border-top">
@@ -134,7 +125,7 @@ We will be working from home today, so please call if you need help.
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script>
     function copyToClipboard(element) {
-        document.getElementById("notice").innerText = `Attention all Students: Due to ${document.getElementById("incidenttype").value}, the ${document.getElementById("campus").value} will be closed today. We will still be available by phone. Stay Safe!`
+        document.getElementById("notice").innerText = `Hello, Please ${document.getElementById("requesttype").value}, for ${document.getElementById("studentName").value} - ${document.getElementById("studentcontract").value}. Thank you`
   var $temp = $("<input>");
   $("body").append($temp);
   $temp.val($(element).text()).select();
